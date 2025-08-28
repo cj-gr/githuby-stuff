@@ -1,10 +1,12 @@
+name: Running a workflow when a release is created
+
 on:
   release:
     types: [published]
 
 jobs:
   run-on-draft-or-prerelease:
-    if: github.event.release.draft == true || github.event.release.prerelease == true
+    #if: github.event.release.draft == true || github.event.release.prerelease == true
     runs-on: ubuntu-latest
     steps:
       - run: |
