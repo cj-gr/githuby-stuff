@@ -1,0 +1,15 @@
+name: Create Release from cli
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  create-release-from-cli:
+    #if: github.event.release.draft == true || github.event.release.prerelease == true
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh release create v1.0.0 --target main
+      
