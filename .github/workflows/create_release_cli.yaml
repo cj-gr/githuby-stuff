@@ -20,5 +20,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
-          gh release create v1.0.4 --target main --draft --prerelease
+          gh release create v1.0.5 --target main --prerelease
       
