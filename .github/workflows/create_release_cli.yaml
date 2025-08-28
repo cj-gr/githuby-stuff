@@ -10,6 +10,8 @@ jobs:
     #if: github.event.release.draft == true || github.event.release.prerelease == true
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
       - name: Create Release from cli
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
