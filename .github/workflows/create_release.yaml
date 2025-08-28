@@ -1,0 +1,14 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  run-on-draft-or-prerelease:
+    if: github.event.release.draft == true || github.event.release.prerelease == true
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Triggered on draft or prerelease!"
+          echo github.event.release.draft
+          echo github.event.release.prerelease
+      
