@@ -10,6 +10,9 @@ jobs:
     #if: github.event.release.draft == true || github.event.release.prerelease == true
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Create Release from cli
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           gh release create v1.0.0 --target main
       
