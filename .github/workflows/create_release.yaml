@@ -9,6 +9,6 @@ jobs:
     steps:
       - run: |
           echo "Triggered on draft or prerelease!"
-          echo ${github.event.release.draft}
-          echo ${github.event.release.prerelease}
+          echo "Draft? ${{ github.event.release.draft }}"
+          echo "Prerelease? ${{ github.event.release.prerelease }}"
       
