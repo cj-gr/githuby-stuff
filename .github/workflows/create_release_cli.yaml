@@ -1,4 +1,4 @@
-name: Create Release from cli
+name: Create Release from gh cli
 
 on:
   push:
