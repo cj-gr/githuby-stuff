@@ -20,5 +20,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
-          gh release create v1.0.2 --target main
+          gh release create v1.0.2 --target main --draft
       
