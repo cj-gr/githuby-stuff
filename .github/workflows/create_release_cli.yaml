@@ -18,7 +18,7 @@ jobs:
         
       - name: Create Release from cli
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
           gh release create v1.0.1 --target main
       
