@@ -1,0 +1,14 @@
+aws sns publish \
+  --topic-arn arn:aws:sns:us-east-1:123456789012:notify-slack \
+  --message '{
+    "blocks": [
+      {
+        "type": "section",
+        "text": {"type": "mrkdwn", "text": "*Build completed successfully!*"}
+      },
+      {
+        "type": "context",
+        "elements": [{"type": "mrkdwn", "text": "Job: `deploy-prod`"}]
+      }
+    ]
+  }'
